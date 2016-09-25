@@ -68,13 +68,31 @@ function status(req, res) {
 
 function kill(req, res) {
 	var status = util.format('Killed');
-	
+	var get = require('simple-get');
+
+	var opts = {
+		url: 'http://localhost:8080/kill',
+		body: ''
+	}
+	get.post(opts,function(err,res){
+		if(err) throw err
+		res.pipe(process.stdout)
+	});
 	res.json(status);
 }
 
 function reset(req, res) {
-	var status = util.format('Reset');
-	
+	var status = util.format('Killed');
+	var get = require('simple-get');
+
+	var opts = {
+		url: 'http://localhost:8080/reset',
+		body: ''
+	}
+	get.post(opts,function(err,res){
+		if(err) throw err
+		res.pipe(process.stdout)
+	});
 	res.json(status);
 }
 
