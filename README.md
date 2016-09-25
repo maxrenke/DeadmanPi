@@ -88,6 +88,6 @@ Python and Node.js libraries for GrovePi board sensors
 https://github.com/DexterInd/GrovePi
 
 
-### Swagger
+### Swagger.io
 
 https://github.com/swagger-api/swagger-node
