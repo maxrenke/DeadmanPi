@@ -78,6 +78,12 @@ dispatcher.onGet("/", function(req,res) {
 	homePage(req,res);
 });
 
+dispatcher.onGet("/alive", function(req,res) {
+	if( alive ) res.write('true');
+	else res.write('false');
+	res.end();
+});
+
 dispatcher.onPost("/kill", function(req, res) {
 	console.log("kill!");
 	alive = false;

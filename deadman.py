@@ -9,7 +9,7 @@ import subprocess
 
 # Connect the Grove Piezo Vibration Sensor to analog port A0
 # OUT,NC,VCC,GND
-piezo = 100#0
+piezo = 100#0 #commented out due to issues
 light_sensor = 1
 button = 3
 
