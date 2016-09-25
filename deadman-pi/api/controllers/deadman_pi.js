@@ -42,10 +42,28 @@ module.exports = {
  */
 function status(req, res) {
   // variables defined in the Swagger document can be referenced using req.swagger.params.{parameter_name}
-  var status = util.format('Online');
 
-  // this sends back a JSON response which is a single string
-  res.json(status);
+  //var deadman = require('../../../server.js');
+  //var value = deadman.getAlive();
+  var result;
+  var get = require('simple-get');
+  get.concat('http://localhost:8080/alive', function (err, stream, data) {
+	if( err ) throw err;
+	var value = false;
+	console.log(stream.statusCode);
+	console.log(data);
+	if( data == 'true' ) value = true;
+        if( value ){
+	  result = util.format('Online');
+  	} else {
+	  result = util.format('Offline');
+	}
+	console.log('result: ' + result);
+
+	// this sends back a JSON response which is a single string
+	res.json(result);
+  });
+
 }
 
 function kill(req, res) {
