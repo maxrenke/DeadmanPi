@@ -28,7 +28,7 @@ server.listen(PORT, function(){
 dispatcher.setStatic('resources');
 
 function getFiles(){
-	fs.readdir("/home/pi/hackathon/files/", function(err,items) {
+	fs.readdir("/home/pi/DeadmanPi/files/", function(err,items) {
 		try{
 			console.log("items: " + items);
 			for(var i=0; i<items.length; i++){
@@ -44,7 +44,7 @@ function removeFiles(files){
 	for(var i=0; i<files.length; i++){
 		try{
 			console.log('delete: ' + files[i]);
-			fs.unlinkSync("/home/pi/hackathon/files/" + files[i]);
+			fs.unlinkSync("/home/pi/DeadmanPi/files/" + files[i]);
 		} catch(err) {
 			//don't handle
 		}
