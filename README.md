@@ -24,7 +24,9 @@ This project was built with **Raspberry Pi 3**, **GrovePi Board**, **GrovePi Sen
 
   **cd lib**
   
-  **node --harmony index.js -d /DeadmanPi/files**
+  **npm install**
+  
+  **node --harmony index.js -d /home/pi/DeadmanPi/files**
   
 3. Run
 
@@ -79,6 +81,7 @@ https://nodejs.org/en/
 Used as a temporary file management system on the server
 
 https://www.npmjs.com/package/node-file-manager
+
 https://github.com/efeiefei/node-file-manager.git
 
 ### GrovePi
