@@ -70,6 +70,24 @@ Holding the **GrovePi Button** will trigger a **RESET** (button must be pressed 
 
 Run **swagger project edit** inside **deadman-pi/**
 
+## Using the API
+
+**curl http://localhost:10010/status; echo**
+
+"Online"
+
+**curl -H 'Content-Type: application/json' -X POST http://localhost:10010/kill; echo**
+
+"Killed"
+
+**curl http://localhost:10010/status; echo**
+
+"Offline"
+
+**curl -H 'Content-Type: application/json' -X POST http://localhost:10010/reset; echo**
+
+"Reset"
+
 ## Dependencies
 
 ### Node.js
