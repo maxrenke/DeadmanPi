@@ -1,5 +1,17 @@
 # DeadmanPi
 
+## Overview
+
+This project was submitted to the [HackDartmouth III](hackdartmouth.io) event held on September 24 - 25, 2016.
+
+The goal of this project is to use a **Raspberry Pi 3** board along with **GrovePi** sensors to create a **Node.js** server that has a hard-ware **DEADMAN** switch. If certain physical triggers are detected by the **Raspberry Pi** then the sever will delete all of the files on the server. Originally, this project was meant to interface with the document sharing API at [IntraLinks](https://developers.intralinks.com) but this project still serves as a proof of concept of a server with a physical **DEADMAN** switch attached.
+
+This project was built with **Raspberry Pi 3**, **GrovePi Board**, **GrovePi Sensors**, **Node.js**, **Python**, and **Swagger.io**.
+
+**Node.js** powers the server as well as the RESTful API (which is powered by **Swagger.io**)
+
+**Python** powers the **DEADMAN** switch.
+
 ## Build Instructions
 
 1. Run 
@@ -26,9 +38,11 @@
 
 ## Useful Links
 
-http://localhost:8080 - Deadman Server Page (Node.js)
-http://localhost:5000 - Node File Manager Page (Node.js)
-http://localhost:10010 - RESTful API powered by Swagger.io
+<http://localhost:8080> - Deadman Server Page (Node.js)
+
+<http://localhost:5000> - Node File Manager Page (Node.js)
+
+<http://localhost:10010> - RESTful API powered by Swagger.io
 
 ## Setting Up the Pi
 
