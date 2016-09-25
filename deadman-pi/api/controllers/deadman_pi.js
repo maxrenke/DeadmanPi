@@ -12,6 +12,12 @@
  */
 var util = require('util');
 
+
+/* GrovePi */
+var GrovePi = require('node-grovepi').GrovePi;
+var Commands = GrovePi.commands;
+var Board = GrovePi.board;
+
 /*
  Once you 'require' a module you can reference the things that it exports.  These are defined in module.exports.
 
@@ -60,7 +66,17 @@ function sensor(req, res) {
 	
 	var value = 0;
 	
+	var board = new Board({
+		onError: function(err){
+			console.log(err);
+		}
+	});
+	board.init();
+
 	if( sensor == 'light' ){
+		var LightAnalogSensor = GrovePi.sensors.LightAnalog;
+		var lightSensor = new LightAnalogSensor(2);
+		value = lightSensor.read();
 		var data = util.format('Light: ', value);
 	} else if ( sensor == 'vibration' ){
 		var data = util.format('Vibration: ', value);
