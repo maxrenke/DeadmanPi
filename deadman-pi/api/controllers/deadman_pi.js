@@ -82,7 +82,7 @@ function kill(req, res) {
 }
 
 function reset(req, res) {
-	var status = util.format('Killed');
+	var status = util.format('Reset');
 	var get = require('simple-get');
 
 	var opts = {
