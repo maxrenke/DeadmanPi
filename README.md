@@ -20,6 +20,8 @@ This project was built with **Raspberry Pi 3**, **GrovePi Board**, **GrovePi Sen
   
 2. Run 
 
+  **(only once) git clone https://github.com/efeiefei/node-file-manager.git**
+
   **cd node-file-manager**
 
   **cd lib**
